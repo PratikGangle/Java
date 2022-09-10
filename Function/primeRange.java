@@ -2,21 +2,32 @@ package functions;
 
 import conditionals_loops.nCr;
 
-public class primeRange{
-
-
+public class primeRange {
 
     public static void main(String[] args) {
-        
-        int n =10;
 
-        for (int i = 0; i < n; i++) {
+        int num1 = 10;
+        int num2 = 20;
 
-            if(n%i==0)
-            {
-                System.out.println("");
-            }
-            
-        }
+        Prime_Numbers(num1, num2);
     }
+
+    public static void Prime_Numbers(int num1, int num2) {
+        boolean a;
+
+        for (int i = num1; i < num2; i++) {
+
+            a = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    a = false;
+                   }
+            }
+            // System.out.println(i);
+            if (a == true)
+                System.out.println(i);
+        }
+
+    }
+
 }
