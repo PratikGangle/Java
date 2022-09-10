@@ -2,7 +2,6 @@ package functions;
 
 import java.util.Scanner;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
 
 public class prime {
 
@@ -14,13 +13,22 @@ public class prime {
 
         num = in.nextInt();
         
-        Prime_Number(num);
+        boolean ans = Prime_Number(num);
+        System.out.println(ans);
+
 
 
     }
 
     public static boolean Prime_Number (int num)
     {
+        for (int i = 2; i < num; i++) {
+            if(num%i==0){
+                return false;
+            }
+        }
+
+        return true;
         
 
 
